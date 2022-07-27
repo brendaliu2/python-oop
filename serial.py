@@ -23,8 +23,12 @@ class SerialGenerator:
         self.start = start
         self.next =  start
 
+    """creates future value and returns current"""
     def generate(self):
         self.next = self.next + 1
         current = self.next - 1
         return current
 
+    """returns starting number"""
+    def reset(self):
+        self.next = self.start
